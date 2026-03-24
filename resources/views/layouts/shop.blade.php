@@ -38,7 +38,7 @@
         <div class="flex items-center justify-between h-16">
 
             {{-- Logo --}}
-            <a href="{{ route('home') }}" class="flex items-center gap-2">
+            <a href="{{ url('/') }}" class="flex items-center gap-2">
                 <span class="text-2xl font-extrabold bg-gradient-to-r from-primary to-anime bg-clip-text text-transparent">
                     🎌 AniStore
                 </span>
@@ -46,7 +46,7 @@
 
             {{-- Desktop Nav --}}
             <div class="hidden md:flex items-center gap-8">
-                <a href="{{ route('home') }}"      class="text-sm font-medium text-gray-600 hover:text-primary transition">Home</a>
+                <a href="{{ url('/') }}"      class="text-sm font-medium text-gray-600 hover:text-primary transition">Home</a>
                 <a href="{{ route('shop.index') }}" class="text-sm font-medium text-gray-600 hover:text-primary transition">Shop</a>
                 @foreach(\App\Models\Category::active()->take(4)->get() as $cat)
                     <a href="{{ route('shop.category', $cat) }}" class="text-sm font-medium text-gray-600 hover:text-primary transition">{{ $cat->name }}</a>
